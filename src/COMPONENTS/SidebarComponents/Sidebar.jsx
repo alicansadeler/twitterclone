@@ -51,7 +51,7 @@ export const Sidebar = () => {
           <span>More</span>
         </Link>
 
-        <button className="sidebar-button">Twiit</button>
+        <button className="sidebar-button">Tweet</button>
         <User />
       </div>
     </>

@@ -108,7 +108,10 @@ export const TwitterContextLoginProvider = ({ children }) => {
       });
   };
 
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(); /// KULLANICI BİLGİLERİ
+  const [createPost, setCreatePost] = useState({
+    post: "",
+  });
 
   return (
     <TwitterContextLogin.Provider
@@ -127,6 +130,8 @@ export const TwitterContextLoginProvider = ({ children }) => {
         handleSubmit,
         user,
         setUser,
+        createPost,
+        setCreatePost,
       }}
     >
       {children}
