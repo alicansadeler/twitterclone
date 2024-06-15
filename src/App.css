@@ -1,0 +1,109 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.form-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+}
+
+.form-content {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  gap: 1rem;
+  padding: 0 6rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 50vh;
+  height: 5vh;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 53vh;
+  height: 8vh;
+  padding: 10px 0;
+  font-size: 1rem;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.1rem;
+  border-radius: 2rem;
+}
+
+button:hover {
+  background-color: #0d8bd4;
+}
+
+.login-metin {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 5rem;
+}
+.login-metin h1 {
+  font-size: 4rem;
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.form-content h4 {
+  padding: 0.2rem;
+  color: red;
+  background-color: #ff8f8f;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  font-style: italic;
+  margin-top: 0;
+}
