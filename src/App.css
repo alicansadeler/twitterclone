@@ -107,3 +107,65 @@ button:hover {
   font-style: italic;
   margin-top: 0;
 }
+
+.homepage-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  width: 80rem;
+  height: 92rem;
+  justify-content: center;
+}
+
+.homepage-sidebar {
+  border: 1px solid purple;
+  width: 17.2rem;
+  height: 92rem;
+}
+
+.homepage-timeline {
+  border: 1px solid purple;
+  width: 45.6rem;
+  height: 92rem;
+}
+
+.homepage-trend {
+  border: 1px solid purple;
+  width: 17.2rem;
+  height: 92rem;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+.sidebar-container img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  margin: 1rem 1rem;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+.sidebar-button {
+  width: 20vh;
+  height: 5vh;
+  font-size: 1rem;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin: 2.5rem 2.5rem;
+}
