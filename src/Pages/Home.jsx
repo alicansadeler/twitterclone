@@ -1,6 +1,6 @@
-import { Sidebar } from "../COMPONENTS/HomeComponents/Sidebar";
-import { TimeLine } from "../COMPONENTS/HomeComponents/TimeLine";
-import { TrendList } from "../COMPONENTS/HomeComponents/TrendList";
+import { Sidebar } from "../COMPONENTS/SidebarComponents/Sidebar";
+import { TimeLine } from "../COMPONENTS/TimeLineComponents/TimeLine";
+import { TrendList } from "../COMPONENTS/TimeLineComponents/TrendList";
 export const Home = () => {
   return (
     <>

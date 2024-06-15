@@ -41,15 +41,10 @@ export const TwitterContextLoginProvider = ({ children }) => {
     return (
       /[A-Z]/.test(password) &&
       /[a-z]/.test(password) &&
-      /[0-9]/.test(password) &&
-      /[^A-Za-z0-9]/.test(password) &&
+      /[^A-Za-z]/.test(password) && // Sadece özel karakterler
       password.length > 4
     );
   }
-
-  const validateUser = (userName) => {
-    return userName[0] === "@" && userName.length >= 4;
-  };
 
   const handleChange = (event) => {
     let { value, name, type, checked } = event.target;
@@ -93,18 +88,27 @@ export const TwitterContextLoginProvider = ({ children }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!isValid) return;
-
     axios
-      .post("https://reqres.in/api/users", formData)
-      .then(function (response) {
-        console.log(response.data);
-        setFormData(initialForm);
-        history.push("/home");
+      .get("https://6658a29a5c36170526494b43.mockapi.io/users/pokemons")
+      .then((res) => {
+        const user = res.data.find(
+          (item) =>
+            item.password === formData.password && item.email === formData.email
+        );
+        if (user) {
+          setFormData(initialForm);
+          setUser(user);
+          history.push("/home");
+        } else {
+          history.push("/error");
+        }
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch((error) => {
+        console.error("Error fetching data:", error);
       });
   };
+
+  const [user, setUser] = useState();
 
   return (
     <TwitterContextLogin.Provider
@@ -119,9 +123,10 @@ export const TwitterContextLoginProvider = ({ children }) => {
         setIsValid,
         validateEmail,
         validatePassword,
-        validateUser,
         handleChange,
         handleSubmit,
+        user,
+        setUser,
       }}
     >
       {children}

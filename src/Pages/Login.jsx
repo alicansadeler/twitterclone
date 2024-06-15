@@ -11,19 +11,13 @@ export const Login = () => {
     setIsValid,
     validateEmail,
     validatePassword,
-    validateUser,
     handleChange,
     handleSubmit,
   } = useContext(TwitterContextLogin);
 
   useEffect(() => {
-    const { email, password, userName, terms } = formData;
-    if (
-      validateEmail(email) &&
-      validatePassword(password) &&
-      validateUser(userName) &&
-      terms
-    ) {
+    const { email, password, terms } = formData;
+    if (validateEmail(email) && validatePassword(password) && terms) {
       setIsValid(true);
     } else {
       setIsValid(false);
@@ -53,18 +47,7 @@ export const Login = () => {
             />
             {errors.email && <h4>{errorMessage.email}</h4>}
           </label>
-          <label>
-            Kullanıcı Adı
-            <input
-              type="text"
-              placeholder="@example"
-              id="userName"
-              name="userName"
-              onChange={handleChange}
-              value={formData.userName}
-            />
-            {errors.userName && <h4>{errorMessage.userName}</h4>}
-          </label>
+
           <label>
             Parola
             <input
