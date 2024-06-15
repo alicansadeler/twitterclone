@@ -111,26 +111,25 @@ form input[type="password"] {
 .homepage-container {
   display: flex;
   flex-direction: row;
-  width: 80rem;
+  width: 90rem;
   height: 92rem;
   justify-content: center;
+  align-items: center;
   margin-top: -2rem;
 }
 
 .homepage-sidebar {
-  width: 17.2rem;
+  width: 18.2rem;
   height: 92rem;
 }
 
 .homepage-timeline {
-  width: 45.6rem;
+  width: 55.6rem;
   height: 92rem;
-  border-left: 2px solid rgba(216, 216, 216, 1);
-  border-right: 2px solid rgba(216, 216, 216, 1);
 }
 
 .homepage-trend {
-  width: 17.2rem;
+  width: 18.2rem;
   height: 92rem;
 }
 
@@ -207,8 +206,10 @@ form input[type="password"] {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
-  border-bottom: 2px solid rgba(216, 216, 216, 1);
-  width: 100%;
+  border-bottom: none;
+  border-left: 2px solid rgba(216, 216, 216, 1);
+  border-right: 2px solid rgba(216, 216, 216, 1);
+  width: 55.6;
   height: 3.3rem;
   align-items: center;
 }
@@ -225,7 +226,7 @@ form input[type="password"] {
 }
 .create-container {
   height: 9rem;
-  border-bottom: 2px solid rgba(216, 216, 216, 1);
+  border: 2px solid rgba(216, 216, 216, 1);
 }
 .create-container button {
   width: 5rem;
@@ -265,4 +266,43 @@ form input[type="password"] {
   flex-direction: row;
   gap: 1rem;
   margin-left: 5.5rem;
+}
+
+.post-item1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 1.5rem;
+  gap: 1rem;
+}
+
+.post-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.post-item1 img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.post-item1 p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.post-item3 img {
+  width: 40rem;
+  height: 25rem;
+  border-radius: 1.5rem;
+}
+
+.post-container {
+  height: 39rem;
+  border: 2px solid rgba(216, 216, 216, 1);
+  border-top: none;
+  padding: 1rem;
 }

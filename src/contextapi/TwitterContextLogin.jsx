@@ -108,7 +108,8 @@ export const TwitterContextLoginProvider = ({ children }) => {
       });
   };
 
-  const [user, setUser] = useState(); /// KULLANICI BİLGİLERİ
+  const [user, setUser] = useState(); /// KULLANICI BİLGİLERİ.
+
   const [createPost, setCreatePost] = useState({
     post: "",
   });
