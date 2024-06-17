@@ -6,9 +6,11 @@ import image from "../../assets/LOGOpost/image.png";
 import stats from "../../assets/LOGOpost/stats.png";
 import smile from "../../assets/LOGOpost/smile.png";
 import schedule from "../../assets/LOGOpost/schedule.png";
+import axios from "axios";
 
 export const CreatePost = () => {
-  const { createPost, setCreatePost, user } = useContext(TwitterContextLogin);
+  const { createPost, setCreatePost, user, setPostCreated } =
+    useContext(TwitterContextLogin);
   const { avatar } = user;
 
   const handleChange = (event) => {
@@ -16,10 +18,26 @@ export const CreatePost = () => {
     let { value } = event.target;
     setCreatePost({ ...createPost, post: value });
   };
-
-  const handleClick = () => {
-    console.log("Tweet gönderildi:", createPost.post);
-    setCreatePost({ post: "" });
+  let initialCreate = {
+    post: createPost.post,
+    avatar: user.avatar,
+    name: user.name,
+    userName: user.userName,
+  };
+  const handleClickPost = () => {
+    axios
+      .post(
+        "https://6658a29a5c36170526494b43.mockapi.io/users/create",
+        initialCreate
+      )
+      .then(function (response) {
+        console.log(response.data);
+        setPostCreated(true);
+        setCreatePost({ ...createPost, post: "" });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
@@ -51,7 +69,7 @@ export const CreatePost = () => {
           <img src={smile} alt="smile" />
           <img src={schedule} alt="schedule" />
         </span>
-        <button onClick={handleClick}>Tweet</button>
+        <button onClick={handleClickPost}>Tweet</button>
       </div>
     </div>
   );

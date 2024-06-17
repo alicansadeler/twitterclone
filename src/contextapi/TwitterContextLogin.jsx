@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 export const TwitterContextLogin = createContext();
@@ -107,12 +107,14 @@ export const TwitterContextLoginProvider = ({ children }) => {
         console.error("Error fetching data:", error);
       });
   };
-
+  const [postCreated, setPostCreated] = useState(false);
   const [user, setUser] = useState(); /// KULLANICI BİLGİLERİ.
 
   const [createPost, setCreatePost] = useState({
     post: "",
   });
+  const [posts, setPosts] = useState([]);
+  const [newPostCreate, setNewPostCreate] = useState([]);
 
   return (
     <TwitterContextLogin.Provider
@@ -133,6 +135,12 @@ export const TwitterContextLoginProvider = ({ children }) => {
         setUser,
         createPost,
         setCreatePost,
+        posts,
+        setPosts,
+        newPostCreate,
+        setNewPostCreate,
+        postCreated,
+        setPostCreated,
       }}
     >
       {children}

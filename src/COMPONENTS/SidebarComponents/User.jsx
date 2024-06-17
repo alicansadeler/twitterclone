@@ -10,7 +10,7 @@ export const User = () => {
       <button className="userList-container">
         <img src={avatar} alt="avatar" />
         <div className="userList-item">
-          <span>{name}</span>
+          <span style={{ fontWeight: "bold" }}>{name}</span>
           <span>@{userName}</span>
         </div>
       </button>

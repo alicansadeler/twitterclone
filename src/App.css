@@ -304,5 +304,33 @@ form input[type="password"] {
   height: 39rem;
   border: 2px solid rgba(216, 216, 216, 1);
   border-top: none;
-  padding: 1rem;
+  padding: 1rem 0;
+}
+
+.postImage-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding: 2rem 0;
+}
+
+.postImage-container img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.postImage-item1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postImage-item2 {
+  position: relative;
+  display: inline-block;
+}
+
+.newpost-container {
+  height: auto;
+  border: 2px solid rgba(216, 216, 216, 1);
+  border-top: none;
+  padding: 1rem 0;
 }
