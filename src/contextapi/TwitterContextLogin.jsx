@@ -107,7 +107,7 @@ export const TwitterContextLoginProvider = ({ children }) => {
         console.error("Error fetching data:", error);
       });
   };
-  const [postCreated, setPostCreated] = useState(false);
+  const [postCreated, setPostCreated] = useState(true);
   const [user, setUser] = useState(); /// KULLANICI BİLGİLERİ.
 
   const [createPost, setCreatePost] = useState({
