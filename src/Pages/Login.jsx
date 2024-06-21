@@ -30,11 +30,10 @@ export const Login = () => {
         <img src={LoginImage} alt="Login" className="aligned-image" />
       </div>
       <div className="form-content">
-        <div className="login-metin">
-          <h1>Happening Now</h1>
-          <h2>Join X Today</h2>
-        </div>
         <form onSubmit={handleSubmit}>
+          <div className="login-metin">
+            <h2>Login</h2>
+          </div>
           <label>
             Email
             <input
@@ -49,7 +48,7 @@ export const Login = () => {
           </label>
 
           <label>
-            Parola
+            Password
             <input
               type="password"
               placeholder="Lütfen şifrenizi giriniz.."
@@ -68,13 +67,11 @@ export const Login = () => {
               onChange={handleChange}
               checked={formData.terms}
             />
-            Sözleşme Bilgilerini Okudum
+            I have read the contract information
             {errors.terms && <h4>{errorMessage.terms}</h4>}
           </label>
           <div>
-            <button className="login-button" disabled={!isValid}>
-              Giriş
-            </button>
+            <button className="login-button">Giriş</button>
           </div>
         </form>
       </div>

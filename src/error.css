@@ -1,0 +1,19 @@
+.signup-item1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 25%;
+  margin-top: -2rem;
+}
+
+.signup-form {
+  position: relative;
+  background-color: rgba(29, 161, 242, 1);
+  width: 70rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  opacity: 0.8; /* %50 saydamlık */
+}
