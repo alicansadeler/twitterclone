@@ -77,7 +77,7 @@ export const TwitterContextLoginProvider = ({ children }) => {
     }
 
     if (name === "terms") {
-      if (terms) {
+      if (formData.terms) {
         setErrors({ ...errors, [name]: false });
       } else {
         setErrors({ ...errors, [name]: true });

@@ -68,7 +68,7 @@ export const Login = () => {
               checked={formData.terms}
             />
             I have read the contract information
-            {errors.terms && <h4>{errorMessage.terms}</h4>}
+            {!errors.terms && <h4>{errorMessage.terms}</h4>}
           </label>
           <div>
             <button className="login-button">Giriş</button>
