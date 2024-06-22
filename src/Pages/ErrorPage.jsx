@@ -54,7 +54,7 @@ export const ErrorPage = () => {
   }
 
   const validateUser = (userName) => {
-    return userName[0] === "@";
+    return userName.length >= 5;
   };
 
   const handleChange = (event) => {
