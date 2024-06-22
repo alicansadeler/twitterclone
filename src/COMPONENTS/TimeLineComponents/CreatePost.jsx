@@ -69,7 +69,9 @@ export const CreatePost = () => {
           <img src={smile} alt="smile" />
           <img src={schedule} alt="schedule" />
         </span>
-        <button onClick={handleClickPost}>Tweet</button>
+        <button onClick={handleClickPost} data-cy="tweet-button">
+          Tweet
+        </button>
       </div>
     </div>
   );
