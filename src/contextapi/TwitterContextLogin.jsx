@@ -107,14 +107,14 @@ export const TwitterContextLoginProvider = ({ children }) => {
         console.error("Error fetching data:", error);
       });
   };
-  const [postCreated, setPostCreated] = useState(true);
-  const [user, setUser] = useState(); /// KULLANICI BİLGİLERİ.
+  const [postCreated, setPostCreated] = useState(true); // YENİ POST TAKİP ETMEK İÇİN(USEEFFECT)
+  const [user, setUser] = useState(); /// GİRİŞ YAPAN KULLANICI BİLGİLERİ.
 
   const [createPost, setCreatePost] = useState({
     post: "",
-  });
-  const [posts, setPosts] = useState([]);
-  const [newPostCreate, setNewPostCreate] = useState([]);
+  }); // ATILAN TWEET VALUE
+  const [posts, setPosts] = useState([]); // KULLANICI ETKİLEŞİMLERİ GET İSTEĞİ
+  const [newPostCreate, setNewPostCreate] = useState([]); // YENİ ATILAN TWEET GET İSTEĞİ
 
   return (
     <TwitterContextLogin.Provider
