@@ -1,8 +1,10 @@
-import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { Route, Switch } from "react-router-dom";
 import { Home } from "./Pages/Home";
 import { Login } from "./Pages/Login";
 import { ErrorPage } from "./Pages/ErrorPage";
 import "./App.css";
+
+import { PrivateRoute } from "./PrivateRoote";
 
 function App() {
   return (
@@ -11,9 +13,9 @@ function App() {
         <Route path="/" exact>
           <Login />
         </Route>
-        <Route path="/home">
+        <PrivateRoute path="/home">
           <Home />
-        </Route>
+        </PrivateRoute>
 
         <Route exact path="/error">
           <ErrorPage />

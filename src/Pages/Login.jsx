@@ -1,26 +1,28 @@
 import React, { useContext, useEffect } from "react";
 import LoginImage from "../assets/Xlogin.jpeg";
 import { TwitterContextLogin } from "../contextapi/TwitterContextLogin";
+import { TrendContext } from "../contextapi/TrendContext";
 
 export const Login = () => {
   const {
     errorMessage,
     formData,
     errors,
-    isValid,
     setIsValid,
     validateEmail,
     validatePassword,
     handleChange,
     handleSubmit,
   } = useContext(TwitterContextLogin);
-
+  const { setloggedIn } = useContext(TrendContext);
   useEffect(() => {
     const { email, password, terms } = formData;
     if (validateEmail(email) && validatePassword(password) && terms) {
       setIsValid(true);
+      setloggedIn(true);
     } else {
       setIsValid(false);
+      setloggedIn(false);
     }
   }, [formData]);
 
